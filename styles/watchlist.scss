@@ -1,0 +1,80 @@
+@import 'variables';
+
+.page-watchlist {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            text-align: center;
+            margin: 0;
+            padding-bottom: 1.5rem;
+            @include headerStyle2;
+            font-size: 2.25rem;
+        }
+
+        .button {
+            margin: 0;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .cards-container {
+        display: flex;
+        width: 312px;
+
+        .card:hover {
+            transform: scale(1);
+        }
+    }
+
+    .delete-button {
+        background: $primaryColor;
+        color: white;
+        padding: .5rem 1rem;
+        width: 120px;
+        display: none;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    @media only screen and (min-width: 500px) {
+        .cards-container {
+            width: 392px;
+        }
+        
+        main {
+            h1 {
+                font-size: 3rem;
+              }
+        }
+
+        .delete-button {
+            width: 160px;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        main {
+            align-items: flex-start;
+
+            h1 {
+                font-size: 3rem;
+                text-align: left;
+            }
+        }
+
+        .cards-container {
+            justify-content: flex-start;
+            width: 100%;
+        }
+    }
+
+    @media only screen and (min-width: 1368px) {
+        .thumbnail {
+            width: 160px;
+            height: 240px;
+        }
+    }
+}

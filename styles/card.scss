@@ -1,0 +1,70 @@
+@import 'variables';
+
+.card {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    transition: cubic-bezier(.68,-0.55,.27,1.55) .3s;
+    width: min-content;
+    vertical-align: top;
+    display: flex;
+    flex-direction: row;
+
+    .side-detail {
+        writing-mode: vertical-rl;
+        width: 7px;
+        letter-spacing: 3px;
+        font-size: .9rem;
+    }
+
+    .card-label {
+        margin: 0;
+        font-size: 1rem;
+        letter-spacing: initial;
+        font-weight: 600;
+        color: $primaryColor;
+    }
+
+    .secondary-label {
+        font-weight: normal;
+        margin: .25rem 0;
+        font-size: .9rem;
+        color: $bodyColor;
+    }
+
+    .thumbnail {
+        position: relative;
+        width: 120px;
+        height: 180px;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.04);
+    }
+
+    @media only screen and (min-width: 500px) {
+
+        .thumbnail {
+            width: 160px;
+            height: 240px;
+        }
+
+        .secondary-label {
+            font-size: .9rem;
+        }
+    
+        .card-label {
+            font-size: 1rem;
+        }
+    }
+
+    @media only screen and (min-width: 1368px) {
+        .thumbnail {
+            width: 200px;
+            height: 300px;
+        }
+    }
+}

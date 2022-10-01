@@ -1,0 +1,45 @@
+@import 'variables';
+
+.page-movie {
+  .movie-info {
+    text-align: center;
+  }
+
+  .label {
+    font-weight: 600;
+    margin: 0;
+    font-family: $font;
+    color: $primaryColor;
+  }
+
+  .info {
+    color: $bodyColor;
+    height: 17px;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .details {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .detail {
+      &:first-of-type {
+        margin-right: 2rem;
+      }
+    }
+
+    .info-box {
+      h1 {
+        margin-top: 0;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .info-box {
+      width: 550px;
+    }
+  }
+}

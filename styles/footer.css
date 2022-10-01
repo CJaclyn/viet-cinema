@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;800&display=swap");
+footer {
+  padding: 1rem 2rem;
+  color: #593f0e;
+}
+
+@media only screen and (min-width: 1500px) {
+  footer {
+    margin-top: 2rem;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

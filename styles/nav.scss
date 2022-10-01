@@ -1,0 +1,118 @@
+@import 'variables';
+
+nav {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    color: $primaryColor;
+
+    .nav-links {
+        margin-top: 1rem;
+
+        a {
+            margin-right: 1rem;
+            font-weight: bold;
+    
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    
+    }
+    
+    .logo {
+        font-weight: 700;
+    }
+
+    form {
+        input {
+            border: none;
+            padding: .75rem .75rem;
+            width: 200px;
+            background: white;
+        }
+
+        .button {
+            padding: 0;
+            margin-left: .5rem;
+            background: none;
+        }
+    }
+
+    .nav-right .ai-Search {
+        vertical-align: middle;
+        font-size: initial;
+    }
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .ai-Search {
+        stroke-width: .15rem;
+        stroke: $primaryColor;
+    }
+
+    form button {
+        margin-left: 1rem;
+        box-shadow: none;
+        width: min-content;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    nav {
+        .logo {
+            margin-right: 1rem;
+        }
+
+        .nav-links {
+            margin-top: 0;
+        }
+    }
+
+    .nav-container {
+        flex-direction: row;
+    }
+
+    .nav-left {
+        margin: 0;
+        flex-direction: row;
+    }
+
+    .nav-right {
+        form button {
+            margin-top: 0;
+            margin-left: 1rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1368px) {
+    .nav-container {
+        width: 1100px;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    nav {
+        margin-bottom: 2rem;
+    }
+}
+

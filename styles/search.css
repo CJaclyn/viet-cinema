@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;800&display=swap");
+.page-search h1 {
+  text-align: center;
+}
+
+.page-search .not-found {
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 1.75rem;
+}
+
+@media only screen and (min-width: 500px) {
+  .page-search h1 {
+    text-align: left;
+  }
+  .page-search .not-found {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1368px) {
+  .page-search .thumbnail {
+    width: 160px;
+    height: 240px;
+  }
+}
+/*# sourceMappingURL=search.css.map */

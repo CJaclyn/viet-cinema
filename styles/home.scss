@@ -1,0 +1,156 @@
+@import 'variables';
+
+.page-home {
+  .video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    display: none;
+  }
+
+  .banana {
+    position: absolute;
+    right: 5rem;
+    z-index: -9999999;
+  }
+  
+  .wave-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+
+    img {
+      object-fit: cover;
+      object-fit: contain;
+      position: relative;
+    }
+  }
+
+  header,
+  main {
+    z-index: 1;
+    position: relative;
+  }
+
+  header {
+    position: relative;
+    text-align: center;
+    padding: 0 1.5rem;
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      position: relative;
+      z-index: -1;
+      @include headerStyle;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      margin: 0;
+      margin-top: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  section {
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 2.25rem;
+      @include headerStyle2;
+    }
+  }
+
+  .featured,
+  .latest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  @media only screen and (min-width: 500px) {
+    header {
+      h1 {
+        font-size: 3.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    section {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    .cards-container {
+      width: 392px;
+    }
+  }
+
+  @media only screen and (min-width: 778px) {
+    .latest h1 {
+      text-align: left;
+    }
+
+    .cards-container {
+      width: 588px;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .cards-container {
+      width: 784px;
+    }
+  }
+
+  @media only screen and (min-width: 1368px) {
+    header {
+      h1 {
+        font-size: 6rem;
+        margin: 0;
+      }
+
+      p {
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin: 0;
+      }
+    }
+
+    .latest {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    .featured {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    .cards-container {
+      width: 944px;
+    }
+  }
+
+  @media only screen and (min-width: 1500px) {
+    main {
+      padding: 0;
+      padding-top: 1.5rem;
+    }
+  }
+}

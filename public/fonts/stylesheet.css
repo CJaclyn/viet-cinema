@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Han-Nom Gothic';
+    src: url('Han-NomGothic.eot');
+    src: url('Han-NomGothic.eot?#iefix') format('embedded-opentype'),
+        url('Han-NomGothic.woff2') format('woff2'),
+        url('Han-NomGothic.woff') format('woff'),
+        url('Han-NomGothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

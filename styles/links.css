@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;800&display=swap");
+.links {
+  margin-top: .5rem;
+}
+
+.links p {
+  margin: 0;
+  color: #593f0e;
+}
+
+.links a {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #B85523;
+  margin-right: .5rem;
+  letter-spacing: normal;
+}
+/*# sourceMappingURL=links.css.map */

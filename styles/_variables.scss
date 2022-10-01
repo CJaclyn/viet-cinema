@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;800&display=swap');
+$primaryColor: #B85523;
+$bodyColor: #593f0e;
+$accentColor: #E7A656;
+$font: 'Inconsolata', monospace;
+$border: solid $accentColor 2px;
+@mixin headerStyle {
+      font-weight: 700;
+      text-transform: uppercase;
+}
+@mixin headerStyle2 {
+      text-transform: capitalize;
+}

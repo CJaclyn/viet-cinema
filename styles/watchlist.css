@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;800&display=swap");
+.page-watchlist main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-watchlist main h1 {
+  text-align: center;
+  margin: 0;
+  padding-bottom: 1.5rem;
+  text-transform: capitalize;
+  font-size: 2.25rem;
+}
+
+.page-watchlist main .button {
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+
+.page-watchlist .cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 312px;
+}
+
+.page-watchlist .cards-container .card:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.page-watchlist .delete-button {
+  background: #B85523;
+  color: white;
+  padding: .5rem 1rem;
+  width: 120px;
+  display: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 500px) {
+  .page-watchlist .cards-container {
+    width: 392px;
+  }
+  .page-watchlist main h1 {
+    font-size: 3rem;
+  }
+  .page-watchlist .delete-button {
+    width: 160px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-watchlist main {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .page-watchlist main h1 {
+    font-size: 3rem;
+    text-align: left;
+  }
+  .page-watchlist .cards-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1368px) {
+  .page-watchlist .thumbnail {
+    width: 160px;
+    height: 240px;
+  }
+}
+/*# sourceMappingURL=watchlist.css.map */

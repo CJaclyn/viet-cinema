@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;800&display=swap");
+.page-movie .movie-info {
+  text-align: center;
+}
+
+.page-movie .label {
+  font-weight: 600;
+  margin: 0;
+  font-family: "Inconsolata", monospace;
+  color: #B85523;
+}
+
+.page-movie .info {
+  color: #593f0e;
+  height: 17px;
+}
+
+@media only screen and (min-width: 600px) {
+  .page-movie .details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .page-movie .detail:first-of-type {
+    margin-right: 2rem;
+  }
+  .page-movie .info-box h1 {
+    margin-top: 0;
+    text-transform: capitalize;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .page-movie .info-box {
+    width: 550px;
+  }
+}
+/*# sourceMappingURL=infoBox.css.map */

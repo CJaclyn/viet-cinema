@@ -1,0 +1,30 @@
+@import 'variables';
+
+.page-search {
+    h1 {
+        text-align: center;
+    }
+
+    .not-found {
+        font-size: 1.1rem;
+        text-align: center;
+        line-height: 1.75rem;
+    }
+
+    @media only screen and (min-width: 500px) {
+        h1 {
+            text-align: left;
+        }
+
+        .not-found {
+            text-align: left;
+        }
+    }
+
+    @media only screen and (min-width: 1368px) {
+        .thumbnail {
+            width: 160px;
+            height: 240px;
+        }
+    }
+}

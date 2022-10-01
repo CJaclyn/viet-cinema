@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;800&display=swap");
+.page-movie main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.page-movie .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page-movie .col button {
+  margin-top: 1rem;
+  width: 200px;
+}
+
+.page-movie .section {
+  margin-top: 1.5rem;
+}
+
+.page-movie .greyed {
+  background: darkgray;
+}
+
+.page-movie .genre {
+  color: #B85523;
+}
+
+.page-movie .genre::after {
+  content: ', ';
+  color: #593f0e;
+}
+
+.page-movie .genre:last-child::after {
+  content: '';
+}
+
+.page-movie .large {
+  font-size: 15rem;
+  opacity: 0.05;
+  z-index: 0;
+  position: absolute;
+  margin: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  pointer-events: none;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .page-movie .info-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: left;
+  }
+  .page-movie .info-box-container {
+    margin-left: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-movie .info-box-container {
+    margin-left: 4rem;
+  }
+  .page-movie .col button {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1368px) {
+  .page-movie main {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+/*# sourceMappingURL=movie.css.map */

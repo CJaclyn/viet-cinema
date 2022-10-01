@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;800&display=swap");
+nav {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  color: #B85523;
+}
+
+nav .nav-links {
+  margin-top: 1rem;
+}
+
+nav .nav-links a {
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+nav .nav-links a:last-of-type {
+  margin-right: 0;
+}
+
+nav .logo {
+  font-weight: 700;
+}
+
+nav form input {
+  border: none;
+  padding: .75rem .75rem;
+  width: 200px;
+  background: white;
+}
+
+nav form .button {
+  padding: 0;
+  margin-left: .5rem;
+  background: none;
+}
+
+nav .nav-right .ai-Search {
+  vertical-align: middle;
+  font-size: initial;
+}
+
+.nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.nav-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-right .ai-Search {
+  stroke-width: .15rem;
+  stroke: #B85523;
+}
+
+.nav-right form button {
+  margin-left: 1rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+@media only screen and (min-width: 768px) {
+  nav .logo {
+    margin-right: 1rem;
+  }
+  nav .nav-links {
+    margin-top: 0;
+  }
+  .nav-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .nav-left {
+    margin: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .nav-right form button {
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1368px) {
+  .nav-container {
+    width: 1100px;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  nav {
+    margin-bottom: 2rem;
+  }
+}
+/*# sourceMappingURL=nav.css.map */

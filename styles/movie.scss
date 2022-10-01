@@ -1,0 +1,85 @@
+@import 'variables';
+
+.page-movie {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      margin-top: 1rem;
+      width: 200px;
+    }
+  }
+
+  .section {
+    margin-top: 1.5rem;
+  }
+
+  .greyed {
+    background: rgb(169, 169, 169);
+  }
+
+  .genre {
+    color: $primaryColor;
+
+    &::after {
+      content: ', ';
+      color: $bodyColor;
+    }
+
+    &:last-child {
+      &::after {
+        content: '';
+      }
+    }
+  }
+
+  .large {
+    font-size: 15rem;
+    opacity: 0.05;
+    z-index: 0;
+    position: absolute;
+    margin: 0;
+    width: max-content;
+    pointer-events: none;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .info-section {
+      display: flex;
+      flex-direction: row;
+      text-align: left;
+    }
+
+    .info-box-container {
+      margin-left: 2rem;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .info-box-container {
+      margin-left: 4rem;
+    }
+
+    .col {
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1368px) {
+    main {
+      align-items: flex-start;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import 'variables';
+
+.links {
+    margin-top: .5rem;
+
+    p {
+        margin: 0;
+        color: $bodyColor;
+    }
+
+    a {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $primaryColor;
+        margin-right: .5rem;
+        letter-spacing: normal;
+    }
+}
