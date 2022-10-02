@@ -23,7 +23,7 @@ export default function HoverCard(props) {
 
   return (
     <Link href={`/movie/${slug}`}>
-      <a className='card'>
+      <a className='card' key={props.id}>
         <div
           className='card-main'
           onMouseEnter={() => setHover(true)}

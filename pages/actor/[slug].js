@@ -103,6 +103,7 @@ export default function Actor({
                 movieCasts.map(({ movie }, index) => (
                   <Card
                     key={index}
+                    id={index}
                     type='movie'
                     primaryLabel={movie['data'][0].attributes.title_eng}
                     secondaryLabel={movie['data'][0].attributes.title_vn}
@@ -134,6 +135,7 @@ export default function Actor({
                 showCasts.map(({ show }, index) => (
                   <Card
                     key={index}
+                    id={index}
                     type='show'
                     primaryLabel={show['data'][0].attributes.title_eng}
                     secondaryLabel={show['data'][0].attributes.title_vn}

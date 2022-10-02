@@ -59,15 +59,10 @@ export default function WatchlistPage() {
         <div className='cards-container'>
           {watchlist.length !== 0 ? (
             watchlist.map(
-              ({
-                slug,
-                title_vn,
-                title_eng,
-                title_cn,
-                year,
-                type,
-                thumbnail,
-              }, index) => (
+              (
+                { slug, title_vn, title_eng, title_cn, year, type, thumbnail },
+                index
+              ) => (
                 <div className='card-container' key={index}>
                   <button
                     onClick={() => removeFromWatchlist(title_vn)}
@@ -83,6 +78,8 @@ export default function WatchlistPage() {
                     sideLabel={title_cn}
                     year={year}
                     img={thumbnail.length == 0 ? '/no-img.jpg' : `${thumbnail}`}
+                    key={index}
+                    id={index}
                   />
                 </div>
               )

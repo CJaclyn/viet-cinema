@@ -47,15 +47,18 @@ export default function Search({ moviesData, showsData }) {
         ) : (
           <>
             {movieShow.map(
-              ({
-                slug,
-                title_vn,
-                title_eng,
-                title_cn,
-                release_date,
-                type,
-                thumbnail,
-              }) => (
+              (
+                {
+                  slug,
+                  title_vn,
+                  title_eng,
+                  title_cn,
+                  release_date,
+                  type,
+                  thumbnail,
+                },
+                index
+              ) => (
                 <Card
                   type={type === 'movie' ? 'movie' : 'show'}
                   slug={slug}
@@ -68,6 +71,8 @@ export default function Search({ moviesData, showsData }) {
                       ? '/no-img.jpg'
                       : `${thumbnail.data.attributes.url}`
                   }
+                  key={index}
+                  id={index}
                 />
               )
             )}

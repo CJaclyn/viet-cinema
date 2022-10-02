@@ -21,7 +21,7 @@ export default function Cast(props) {
   return (
     <>
       {cast.length !== 0 ? (
-        cast.map(({ role, actor, index }) => (
+        cast.map(({ role, actor, index }, index) => (
           <Card
             type='actor'
             title={actor['data'][0].attributes.stagename}
@@ -29,6 +29,7 @@ export default function Cast(props) {
             role={role}
             slug={actor['data'][0].attributes.slug}
             key={index}
+            id={index}
             img={
               getThumbnail(actor['data'][0].attributes.stagename) == null
                 ? '/no-img.jpg'

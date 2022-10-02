@@ -79,6 +79,7 @@ export default function Home({ latestMovies, latestShows, featuredMovies }) {
                   title_cn={title_cn}
                   year={release_date}
                   key={index}
+                  id={index}
                   img={
                     thumbnail.data == null
                       ? '/no-img.jpg'

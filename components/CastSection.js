@@ -31,6 +31,7 @@ export default function CastSection(props) {
               sideLabel={actor['data'][0].attributes.hannom}
               slug={actor['data'][0].attributes.slug}
               key={index}
+              id={index}
               img={
                 getThumbnail(actor['data'][0].attributes.stagename) === null
                   ? '/no-img.jpg'

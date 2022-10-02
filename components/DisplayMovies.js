@@ -27,6 +27,7 @@ export default function DisplayMovies(props) {
                   sideLabel={title_cn}
                   year={release_date}
                   key={index}
+                  id={index}
                   img={
                     thumbnail.data == null
                       ? '/no-img.jpg'
@@ -49,6 +50,7 @@ export default function DisplayMovies(props) {
                   type={props.type}
                   slug={slug}
                   key={index}
+                  id={index}
                   img={
                     thumbnail.data == null
                       ? '/no-img.jpg'

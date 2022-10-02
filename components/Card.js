@@ -17,7 +17,7 @@ export default function Card(props) {
 
   return (
     <Link href={`/${props.type}/${props.slug}`}>
-      <a className='card'>
+      <a className='card' key={props.id}>
         <div className='card-main white'>
           <Thumbnail title={props.title} img={props.img} />
           <p className='secondary-label'>{props.secondaryLabel}</p>
