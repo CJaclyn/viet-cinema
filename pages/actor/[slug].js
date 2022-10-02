@@ -168,15 +168,15 @@ export default function Actor({
 
 export async function getStaticProps({ params }) {
   const actorData = await fetchAPI(
-    `actors?filters[slug][$eq]=${params.slug}&populate=*`
+    `actors?filters[slug][$eq]=${params.slug}&pagination[pageSize]=100&populate=*`
   );
   const movieData = await fetchAPI(`movies?populate=*`);
-  const showData = await fetchAPI(`shows?populate=*`);
+  const showData = await fetchAPI(`shows?pagination[pageSize]=100&populate=*`);
   const movieCastData = await fetchAPI(
-    `actor-movies?filters[actor][slug][$eq]=${params.slug}&sort[0]=[movie][release_date]:desc&pagination[pageSize]=100&populate=*`
+    `actor-movies?filters[actor][slug][$eq]=${params.slug}&sort[0]=[movie][release_date]:desc&populate=*`
   );
   const showCastData = await fetchAPI(
-    `actor-shows?filters[actor][slug][$eq]=${params.slug}&sort[0]=[show][release_date]:desc&pagination[pageSize]=100&populate=*`
+    `actor-shows?filters[actor][slug][$eq]=${params.slug}&sort[0]=[show][release_date]:desc&populate=*`
   );
 
   return {
