@@ -6,7 +6,7 @@ import PageHead from '../components/PageHead';
 import Pagination from '../components/Pagination';
 import DisplayMovies from '../components/DisplayMovies';
 
-export default function actors({ actorsData, page, filter }) {
+export default function Actors({ actorsData, page, filter }) {
   const actor = actorsData['data'];
   const totalPages = actorsData['meta'].pagination.pageCount;
   let actors = [];
