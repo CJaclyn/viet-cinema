@@ -37,7 +37,7 @@ export default function Search({ moviesData, showsData }) {
           <p className='not-found'>
             No movies, shows, or dramas found for &lsquo;{searchTerm}&rsquo;.
             <br />
-            If you're searching the Vietnamese title, make sure to use the
+            If you&lsquo;re searching the Vietnamese title, make sure to use the
             correct spelling with diacratics &#40;e.g. &lsquo; Mắt biếc&rsquo;,
             not &lsquo;Mat biec&rsquo;&#41;.
             <br />

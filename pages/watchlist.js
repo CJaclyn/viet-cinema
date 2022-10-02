@@ -88,7 +88,7 @@ export default function WatchlistPage() {
             <p>
               There are no movies, shows, or dramas in your watchlist.
               <br />
-              Your watchlist is stored in your browser's local storage and will
+              Your watchlist is stored in your browser&lsquo;s local storage and will
               be deleted if you clear the local storage.
             </p>
           )}

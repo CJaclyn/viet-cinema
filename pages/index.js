@@ -43,7 +43,7 @@ export default function Home({ latestMovies, latestShows, featuredMovies }) {
             loop
             type='video/mp4'
           >
-            <p>Your browser doesn't support this video.</p>
+            <p>Your browser doesn&lsquo;t support this video.</p>
           </video>
         ) : (
           ''

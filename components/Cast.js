@@ -21,7 +21,7 @@ export default function Cast(props) {
   return (
     <>
       {cast.length !== 0 ? (
-        cast.map(({ role, actor, index }, index) => (
+        cast.map(({ role, actor }, index) => (
           <Card
             type='actor'
             title={actor['data'][0].attributes.stagename}
