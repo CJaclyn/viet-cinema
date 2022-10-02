@@ -15,6 +15,11 @@
   height: 17px;
 }
 
+.page-movie .paragraph {
+  line-height: 1.5rem;
+  height: auto;
+}
+
 @media only screen and (min-width: 600px) {
   .page-movie .details {
     display: -webkit-box;

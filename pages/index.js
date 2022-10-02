@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import PageHead from '../components/PageHead';
 import { fetchAPI } from '../lib/api';
 import DisplayMovies from '../components/DisplayMovies';
@@ -95,17 +94,13 @@ export default function Home({ latestMovies, latestShows, featuredMovies }) {
         <section className='latest'>
           <h1>Latest Movies</h1>
           <DisplayMovies data={movies} type='movie' />
-          <Link href='/movies'>
-            <Button name='All movies' />
-          </Link>
+          <Button link='/movies' name='All movies' />
         </section>
 
         <section className='latest'>
           <h1>Latest Shows &amp; Dramas</h1>
-          <DisplayMovies data={shows} type='movie' />
-          <Link href='/shows'>
-            <Button name='All shows' />
-          </Link>
+          <DisplayMovies data={shows} type='show' />
+          <Button link='/shows' name='All shows' />
         </section>
       </main>
     </div>

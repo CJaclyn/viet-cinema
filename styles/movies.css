@@ -15,8 +15,6 @@
 .page-movies main h1 {
   text-align: center;
   margin: 0;
-  text-transform: capitalize;
-  font-size: 2.25rem;
 }
 
 .page-movies form {
@@ -57,7 +55,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 312px;
+  width: 306px;
 }
 
 .page-movies .pagination {
@@ -70,9 +68,18 @@
   display: block;
 }
 
+.page-movies .thumbnail {
+  width: 120px;
+  height: 180px;
+}
+
+.page-movies .side-detail {
+  font-size: 0.8rem;
+}
+
 @media only screen and (min-width: 500px) {
   .page-movies .cards-container {
-    width: 392px;
+    width: 458px;
   }
   .page-movies .pagination button {
     display: inline;
@@ -80,8 +87,14 @@
   .page-movies .pagination button:first-of-type {
     margin-right: 1rem;
   }
-  .page-movies main h1 {
-    font-size: 3rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .page-movies .cards-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 611px;
   }
 }
 
@@ -91,16 +104,17 @@
     text-align: left;
   }
   .page-movies .cards-container {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    width: 588px;
+    width: 578px;
+  }
+  .page-movies .thumbnail {
+    width: 160px;
+    height: 240px;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
   .page-movies .cards-container {
-    width: 784px;
+    width: 771px;
   }
 }
 
@@ -119,18 +133,11 @@
   .page-movies .cards-container {
     width: 100%;
   }
-  .page-movies .thumbnail {
-    width: 160px;
-    height: 240px;
+}
+
+@media only screen and (min-width: 1920px) {
+  .page-movies .cards-container {
+    width: 1156px;
   }
-}
-
-.page-actors .thumbnail {
-  width: 120px;
-  height: 180px;
-}
-
-.page-actors .side-detail {
-  font-size: 0.8rem;
 }
 /*# sourceMappingURL=movies.css.map */

@@ -10,6 +10,11 @@ export default function Movie({ movieData, castData, actorData }) {
   const link = movie.links['data'];
   const genre = movie.genres['data'];
   const year = movie.release_date.slice(0, 4);
+  let links = [];
+  let genres = [];
+  let casts = [];
+  let actorsCast = [];
+  let actors = [];
   let thumbnail = '';
   if (movie.thumbnail.data !== null) {
     thumbnail = movie.thumbnail.data.attributes.url;
@@ -23,11 +28,6 @@ export default function Movie({ movieData, castData, actorData }) {
     type: 'movie',
     thumbnail: thumbnail,
   };
-  let links = [];
-  let genres = [];
-  let casts = [];
-  let actorsCast = [];
-  let actors = [];
 
   function getGenres() {
     for (let i in genre) {
@@ -57,6 +57,7 @@ export default function Movie({ movieData, castData, actorData }) {
     return links;
   }
 
+  //get data of actors that were casted in this movie
   function getActors() {
     const castMembers = [];
 
@@ -64,16 +65,16 @@ export default function Movie({ movieData, castData, actorData }) {
       castMembers.push(casts[i].actor.data[0]);
     }
 
-    actorsCast = actor.filter((o1) =>
-      castMembers.find((o2) => o1.id === o2.id)
+    actorsCast = actor.filter((obj1) =>
+      castMembers.find((obj2) => obj1.id === obj2.id)
     );
   }
 
   getGenres();
+  getLinks();
   getAttributes(cast, casts);
   getActors();
   getAttributes(actorsCast, actors);
-  getLinks();
 
   return (
     <div className='page page-movie'>
@@ -111,7 +112,9 @@ export async function getStaticProps({ params }) {
   const castData = await fetchAPI(
     `actor-movies?filters[movie][slug][$eq]=${params.slug}&populate=*`
   );
-  const actorData = await fetchAPI(`actors?populate=*`);
+  const actorData = await fetchAPI(
+    `actors?pagination[pageSize]=100&populate=*`
+  );
 
   return {
     props: {

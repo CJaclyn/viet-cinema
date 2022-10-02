@@ -53,9 +53,20 @@
     bottom: 1rem;
   }
 
+  .card {
+    &:hover {
+      transform: none;
+    }
+  }
+
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   @media only screen and (min-width: 600px) {
     .info-section {
-      display: flex;
       flex-direction: row;
       text-align: left;
     }

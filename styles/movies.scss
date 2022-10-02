@@ -9,8 +9,6 @@
     h1 {
       text-align: center;
       margin: 0;
-      @include headerStyle2;
-      font-size: 2.25rem;
     }
   }
 
@@ -46,7 +44,7 @@
 
   .cards-container {
     display: flex;
-    width: 312px;
+    width: 306px;
   }
 
   .pagination {
@@ -59,9 +57,18 @@
     }
   }
 
+  .thumbnail {
+    width: 120px;
+    height: 180px;
+  }
+
+  .side-detail {
+    font-size: 0.8rem;
+  }
+
   @media only screen and (min-width: 500px) {
     .cards-container {
-      width: 392px;
+      width: 458px;
     }
 
     .pagination {
@@ -72,11 +79,12 @@
         }
       }
     }
+  }
 
-    main {
-      h1 {
-        font-size: 3rem;
-      }
+  @media only screen and (min-width: 700px) {
+    .cards-container {
+      justify-content: flex-start;
+      width: 611px;
     }
   }
 
@@ -89,14 +97,18 @@
     }
 
     .cards-container {
-      justify-content: flex-start;
-      width: 588px;
+      width: 578px;
+    }
+
+    .thumbnail {
+      width: 160px;
+      height: 240px;
     }
   }
 
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1000px) {
     .cards-container {
-      width: 784px;
+      width: 771px;
     }
   }
 
@@ -113,21 +125,11 @@
     .cards-container {
       width: 100%;
     }
+  }
 
-    .thumbnail {
-      width: 160px;
-      height: 240px;
+  @media only screen and (min-width: 1920px) {
+    .cards-container {
+      width: 1156px;
     }
   }
 }
-
-.page-actors {
-    .thumbnail {
-      width: 120px;
-      height: 180px;
-    }
-
-    .side-detail {
-        font-size: 0.8rem;
-    }
-  }

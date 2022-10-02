@@ -45,7 +45,7 @@ h3 {
 }
 
 h1 {
-  font-size: 1.75em;
+  font-size: 2.25rem;
 }
 
 h2 {
@@ -115,6 +115,18 @@ button {
   width: 312px;
 }
 
+.association {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .association .card .thumbnail {
   width: 120px;
   height: 180px;
@@ -137,23 +149,37 @@ footer {
   text-align: center;
 }
 
+.page-404 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page-404 main h1 {
+  font-size: 5rem;
+  margin: 0;
+}
+
+.page-404 main p {
+  margin-bottom: 2rem;
+}
+
 @media only screen and (min-width: 500px) {
   .cards-container {
     width: 100%;
   }
-}
-
-@media only screen and (min-width: 600px) {
-  .association {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  h1 {
+    font-size: 3rem;
   }
 }
 

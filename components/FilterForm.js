@@ -1,7 +1,16 @@
+import { init } from 'aos';
 import { useState } from 'react';
 
 export default function FilterForm(props) {
-  var [filter, setFilter] = useState('All');
+  let initialFilter;
+
+  if (props.pageName === 'movies' || props.pageName === 'shows') {
+    initialFilter = 'All';
+  } else {
+    initialFilter = 'Female';
+  }
+
+  let [filter, setFilter] = useState(initialFilter);
 
   const handleChange = (e) => {
     setFilter(e.target.value);
@@ -9,7 +18,7 @@ export default function FilterForm(props) {
 
   return (
     <form>
-      {props.pageName === 'movies' ? (
+      {props.pageName === 'movies' || props.pageName === 'shows' ? (
         <select name='genre' id='genre' onChange={handleChange} value={filter}>
           {props.data.map((genre, index) => (
             <option value={genre} key={index}>

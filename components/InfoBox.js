@@ -29,7 +29,11 @@ export default function InfoBox(props) {
               </div>
             </div>
             <div>
-              <InfoLabel label='Synopsis' info={props.synopsis} />
+              <InfoLabel
+                label='Synopsis'
+                info={props.synopsis}
+                className='paragraph'
+              />
             </div>
           </>
         );

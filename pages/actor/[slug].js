@@ -100,7 +100,7 @@ export default function Actor({
             <h2>Movies</h2>
             <div className='association'>
               {movieCasts.length !== 0 ? (
-                movieCasts.map(({ movie, index }) => (
+                movieCasts.map(({ movie }, index) => (
                   <Card
                     key={index}
                     type='movie'
@@ -131,7 +131,7 @@ export default function Actor({
             <h2>Shows &amp; Dramas</h2>
             <div className='association'>
               {showCasts.length !== 0 ? (
-                showCasts.map(({ show, index }) => (
+                showCasts.map(({ show }, index) => (
                   <Card
                     key={index}
                     type='show'
@@ -171,10 +171,10 @@ export async function getStaticProps({ params }) {
   const movieData = await fetchAPI(`movies?populate=*`);
   const showData = await fetchAPI(`shows?populate=*`);
   const movieCastData = await fetchAPI(
-    `actor-movies?filters[actor][slug][$eq]=${params.slug}&populate=*`
+    `actor-movies?filters[actor][slug][$eq]=${params.slug}&sort[0]=[movie][release_date]:desc&populate=*`
   );
   const showCastData = await fetchAPI(
-    `actor-shows?filters[actor][slug][$eq]=${params.slug}&populate=*`
+    `actor-shows?filters[actor][slug][$eq]=${params.slug}&sort[0]=[show][release_date]:desc&populate=*`
   );
 
   return {

@@ -29,16 +29,16 @@ export default function WatchlistPage() {
     const deleteButtons = document.getElementsByClassName('delete-button');
 
     if (edit === true) {
-      for(const button of deleteButtons) {
+      for (const button of deleteButtons) {
         button.style.display = 'block';
       }
     } else {
-      for(const button of deleteButtons) {
-        button.style.display = 'none'; 
+      for (const button of deleteButtons) {
+        button.style.display = 'none';
       }
     }
   }
-  
+
   useEffect(() => {
     if (localStorage.getItem(moviesWatchlist) !== null) {
       setWatchlist(JSON.parse(localStorage.getItem(moviesWatchlist)));
@@ -67,8 +67,8 @@ export default function WatchlistPage() {
                 year,
                 type,
                 thumbnail,
-              }) => (
-                <div className='card-container'>
+              }, index) => (
+                <div className='card-container' key={index}>
                   <button
                     onClick={() => removeFromWatchlist(title_vn)}
                     className='delete-button'
@@ -82,11 +82,7 @@ export default function WatchlistPage() {
                     secondaryLabel={title_vn}
                     sideLabel={title_cn}
                     year={year}
-                    img={
-                      thumbnail.length == 0
-                        ? '/no-img.jpg'
-                        : `${thumbnail}`
-                    }
+                    img={thumbnail.length == 0 ? '/no-img.jpg' : `${thumbnail}`}
                   />
                 </div>
               )
@@ -95,8 +91,8 @@ export default function WatchlistPage() {
             <p>
               There are no movies, shows, or dramas in your watchlist.
               <br />
-              Your watchlist is stored in your browser's local storage. Your
-              watchlist will be deleted if you clear the local storage.
+              Your watchlist is stored in your browser's local storage and will
+              be deleted if you clear the local storage.
             </p>
           )}
         </div>

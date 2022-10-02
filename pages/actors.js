@@ -48,7 +48,7 @@ export async function getServerSideProps({
   query: { page = 1, filter = 'Female' },
 }) {
   const actorsData = await fetchAPI(
-    `actors?sort[0]=publishedAt:desc&pagination[pageSize]=25&pagination[page]=${page}&filters[gender][$eq]=${filter}&populate=*`
+    `actors?sort[0]=stagename:asc&pagination[pageSize]=18&pagination[page]=${page}&filters[gender][$eq]=${filter}&populate=*`
   );
 
   return {

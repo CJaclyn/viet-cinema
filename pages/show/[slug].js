@@ -111,7 +111,9 @@ export async function getStaticProps({ params }) {
   const showData = await fetchAPI(
     `shows?filters[slug][$eq]=${params.slug}&populate=*`
   );
-  const actorData = await fetchAPI(`actors?populate=*`);
+  const actorData = await fetchAPI(
+    `actors?pagination[pageSize]=100&populate=*`
+  );
   const castData = await fetchAPI(
     `actor-shows?filters[show][slug][$eq]=${params.slug}&populate=*`
   );

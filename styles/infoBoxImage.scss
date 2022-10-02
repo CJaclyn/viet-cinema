@@ -2,7 +2,7 @@
     .thumbnail {
         position: relative;
         width: 200px;
-        height: 275px;
+        height: 300px;
 
         img {
             object-fit: cover;
@@ -11,7 +11,7 @@
 
     @media only screen and (min-width: 768px) {
         .thumbnail {
-            width: 225px;
+            width: 200px;
             height: 300px;
         }
     }

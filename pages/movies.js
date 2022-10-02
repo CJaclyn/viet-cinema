@@ -59,7 +59,7 @@ export async function getServerSideProps({
   query: { page = 1, filter = 'All' },
 }) {
   const moviesData = await fetchAPI(
-    `movies?sort[0]=release_date:desc&pagination[pageSize]=25&pagination[page]=${page}&filters[genres][genre][$eq]=${filter}&populate=*`
+    `movies?sort[0]=release_date:desc&pagination[pageSize]=18&pagination[page]=${page}&filters[genres][genre][$eq]=${filter}&populate=*`
   );
   const genreData = await fetchAPI(`genres`);
 

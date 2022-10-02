@@ -23,7 +23,7 @@ export default function CastSection(props) {
       <h2>Cast</h2>
       <div className='association'>
         {cast.length !== 0 ? (
-          cast.map(({ role, actor, index }) => (
+          cast.map(({ role, actor }, index) => (
             <Card
               type='actor'
               primaryLabel={actor['data'][0].attributes.stagename}
