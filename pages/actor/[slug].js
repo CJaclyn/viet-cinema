@@ -84,7 +84,7 @@ export default function Actor({
 
       <main>
         <p className='large'>{actor.hannom}</p>
-        <section>
+        <div className='container'>
           <InfoSection
             type='actor'
             stagename={actor.stagename}
@@ -160,7 +160,7 @@ export default function Actor({
               )}
             </div>
           </section>
-        </section>
+        </div>
       </main>
     </div>
   );

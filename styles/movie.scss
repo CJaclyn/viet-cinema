@@ -16,6 +16,12 @@
       margin-top: 1rem;
       width: 200px;
     }
+
+    &:first-of-type {
+      width: 200px;
+      margin: auto;
+      justify-content: flex-start;
+    }
   }
 
   .section {
@@ -62,7 +68,18 @@
   .info-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+  }
+
+  .container {
+    width: 100%;
+  }
+  
+  @media only screen and (min-width: 500px) {
+    .col {
+      &:first-of-type {
+        margin: initial;
+      }
+    }
   }
 
   @media only screen and (min-width: 600px) {
@@ -73,6 +90,10 @@
 
     .info-box-container {
       margin-left: 2rem;
+    }
+
+    .container {
+      width: initial;
     }
   }
 

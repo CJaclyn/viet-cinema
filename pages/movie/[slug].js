@@ -84,7 +84,7 @@ export default function Movie({ movieData, castData, actorData }) {
       />
 
       <main>
-        <div>
+        <div className='container'>
           <InfoSection
             title_vn={movie.title_vn}
             title_cn={movie.title_cn}

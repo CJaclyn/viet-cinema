@@ -1,5 +1,6 @@
+import React from 'react';
 import FilterForm from '../components/FilterForm';
-import { UseRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import { fetchAPI } from '../lib/api';
 import PageHead from '../components/PageHead';
 import Pagination from '../components/Pagination';
@@ -9,7 +10,7 @@ export default function actors({ actorsData, page, filter }) {
   const actor = actorsData['data'];
   const totalPages = actorsData['meta'].pagination.pageCount;
   let actors = [];
-  const router = UseRouter();
+  const router = useRouter();
 
   function getActors() {
     for (let i in actor) {

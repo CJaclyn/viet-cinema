@@ -28,6 +28,14 @@
   width: 200px;
 }
 
+.page-movie .col:first-of-type {
+  width: 200px;
+  margin: auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .page-movie .section {
   margin-top: 1.5rem;
 }
@@ -76,9 +84,16 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+.page-movie .container {
+  width: 100%;
+}
+
+@media only screen and (min-width: 500px) {
+  .page-movie .col:first-of-type {
+    margin: initial;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -91,6 +106,9 @@
   }
   .page-movie .info-box-container {
     margin-left: 2rem;
+  }
+  .page-movie .container {
+    width: initial;
   }
 }
 
