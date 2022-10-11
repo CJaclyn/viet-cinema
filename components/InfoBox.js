@@ -2,36 +2,47 @@ import InfoLabel from './InfoLabel';
 import Moment from 'react-moment';
 
 export default function InfoBox(props) {
+  const {
+    type,
+    title_eng,
+    title_cn,
+    title,
+    year,
+    genre,
+    synopsis,
+    episodes,
+    seasons,
+    stagename,
+    birthname,
+    birthplace,
+    hannom,
+    born,
+  } = props;
   function getInfoBox() {
-    switch (props.type) {
+    switch (type) {
       case 'movie':
         return (
           <>
             <h1>
-              {props.title_eng} (<Moment format='YYYY'>{props.year}</Moment>)
+              {title_eng} (<Moment format='YYYY'>{year}</Moment>)
             </h1>
             <div className='details'>
               <div className='detail'>
-                <InfoLabel label='Chữ Nôm Title' info={props.title_cn} />
-                <InfoLabel label='Native Title' info={props.title} />
+                <InfoLabel label='Chữ Nôm Title' info={title_cn} />
+                <InfoLabel label='Native Title' info={title} />
               </div>
               <div className='detail'>
                 <InfoLabel
                   label='Release'
-                  info={<Moment format='DD MMMM, YYYY'>{props.year}</Moment>}
+                  info={<Moment format='DD MMMM, YYYY'>{year}</Moment>}
                 />
-                <InfoLabel
-                  label='Genre'
-                  info={props.genre}
-                  link='true'
-                  type={props.type}
-                />
+                <InfoLabel label='Genre' info={genre} link='true' type={type} />
               </div>
             </div>
             <div>
               <InfoLabel
                 label='Synopsis'
-                info={props.synopsis}
+                info={synopsis}
                 className='paragraph'
               />
             </div>
@@ -41,45 +52,40 @@ export default function InfoBox(props) {
         return (
           <>
             <h1>
-              {props.title_eng} (<Moment format='YYYY'>{props.year}</Moment>)
+              {title_eng} (<Moment format='YYYY'>{year}</Moment>)
             </h1>
             <div className='details'>
               <div className='detail'>
-                <InfoLabel label='Chữ Nôm Title' info={props.title_cn} />
-                <InfoLabel label='Native Title' info={props.title} />
+                <InfoLabel label='Chữ Nôm Title' info={title_cn} />
+                <InfoLabel label='Native Title' info={title} />
                 <InfoLabel
                   label='Release'
-                  info={<Moment format='DD MMMM, YYYY'>{props.year}</Moment>}
+                  info={<Moment format='DD MMMM, YYYY'>{year}</Moment>}
                 />
               </div>
               <div className='detail'>
-                <InfoLabel label='Episodes' info={props.episodes} />
-                <InfoLabel label='Seasons' info={props.seasons} />
-                <InfoLabel
-                  label='Genre'
-                  info={props.genre}
-                  link='true'
-                  type={props.type}
-                />
+                <InfoLabel label='Episodes' info={episodes} />
+                <InfoLabel label='Seasons' info={seasons} />
+                <InfoLabel label='Genre' info={genre} link='true' type={type} />
               </div>
             </div>
             <div>
-              <InfoLabel label='Synopsis' info={props.synopsis} />
+              <InfoLabel label='Synopsis' info={synopsis} />
             </div>
           </>
         );
       case 'actor':
         return (
           <>
-            <h1>{props.stagename}</h1>
+            <h1>{stagename}</h1>
             <div className='details'>
               <div className='detail'>
-                <InfoLabel label='Birthname' info={props.birthname} />
-                <InfoLabel label='Hán Nôm' info={props.hannom} />
+                <InfoLabel label='Birthname' info={birthname} />
+                <InfoLabel label='Hán Nôm' info={hannom} />
               </div>
               <div className='detail'>
-                <InfoLabel label='Born' info={props.born} date='true' />
-                <InfoLabel label='Birthplace' info={props.birthplace} />
+                <InfoLabel label='Born' info={born} date='true' />
+                <InfoLabel label='Birthplace' info={birthplace} />
               </div>
             </div>
           </>

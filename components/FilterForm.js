@@ -3,8 +3,9 @@ import { useState } from 'react';
 
 export default function FilterForm(props) {
   let initialFilter;
+  const { pageName, router, data } = props;
 
-  if (props.pageName === 'movies' || props.pageName === 'shows') {
+  if (pageName === 'movies' || pageName === 'shows') {
     initialFilter = 'All';
   } else {
     initialFilter = 'Female';
@@ -18,9 +19,9 @@ export default function FilterForm(props) {
 
   return (
     <form>
-      {props.pageName === 'movies' || props.pageName === 'shows' ? (
+      {pageName === 'movies' || pageName === 'shows' ? (
         <select name='genre' id='genre' onChange={handleChange} value={filter}>
-          {props.data.map((genre, index) => (
+          {data.map((genre, index) => (
             <option value={genre} key={index}>
               {genre}
             </option>
@@ -40,7 +41,7 @@ export default function FilterForm(props) {
       <button
         className='button'
         type='button'
-        onClick={() => props.router.push(`/${props.pageName}?filter=${filter}`)}
+        onClick={() => router.push(`/${pageName}?filter=${filter}`)}
       >
         Filter
       </button>

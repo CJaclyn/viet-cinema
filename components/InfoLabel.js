@@ -2,12 +2,12 @@ import Link from 'next/link';
 import Moment from 'react-moment';
 
 export default function InfoLabel(props) {
+  const { info, type, label, link, date, className } = props;
+
   function getLink() {
-    return props.info.map((genre, index) => (
-      <Link href={`/${props.type}s?filter=${genre}`} key={index}>
-        <a className='genre'>
-          {genre}
-        </a>
+    return info.map((genre, index) => (
+      <Link href={`/${type}s?filter=${genre}`} key={index}>
+        <a className='genre'>{genre}</a>
       </Link>
     ));
   }
@@ -33,16 +33,15 @@ export default function InfoLabel(props) {
 
   return (
     <>
-      <p className='label'>{props.label}</p>
-      {props.link === 'true' ? (
+      <p className='label'>{label}</p>
+      {link === 'true' ? (
         <p className='info'>{getLink()}</p>
-      ) : props.date === 'true' ? (
+      ) : date === 'true' ? (
         <p className='info'>
-          <Moment format='DD MMMM, YYYY'>{props.info}</Moment> (
-          {getAge(props.info)})
+          <Moment format='DD MMMM, YYYY'>{info}</Moment> ({getAge(info)})
         </p>
       ) : (
-        <p className={`info ${props.className}`}>{props.info}</p>
+        <p className={`info ${className}`}>{info}</p>
       )}
     </>
   );

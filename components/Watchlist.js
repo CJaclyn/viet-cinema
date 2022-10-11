@@ -67,7 +67,9 @@ export default function Watchlist(props) {
 
   return (
     <button onClick={() => addToWatchlist()} className='button'>
-      {watchlist.some((i) => i.title_vn === movie.title_vn) ? 'remove' : 'add to watchlist'}
+      {watchlist.some((i) => i.title_vn === movie.title_vn)
+        ? 'remove'
+        : 'add to watchlist'}
     </button>
   );
 }

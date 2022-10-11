@@ -170,7 +170,9 @@ export async function getStaticProps({ params }) {
   const actorData = await fetchAPI(
     `actors?filters[slug][$eq]=${params.slug}&populate=*`
   );
-  const movieData = await fetchAPI(`movies?pagination[pageSize]=100&populate=*`);
+  const movieData = await fetchAPI(
+    `movies?pagination[pageSize]=100&populate=*`
+  );
   const showData = await fetchAPI(`shows?pagination[pageSize]=100&populate=*`);
   const movieCastData = await fetchAPI(
     `actor-movies?filters[actor][slug][$eq]=${params.slug}&sort[0]=[movie][release_date]:desc&populate=*`

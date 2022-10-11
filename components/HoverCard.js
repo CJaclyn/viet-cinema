@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export default function HoverCard(props) {
   const [hover, setHover] = useState(false);
-  const { video, slug, title, title_eng, title_cn, img, year } = props;
+  const { video, slug, title, title_eng, title_cn, img, year, id } = props;
 
   if (typeof window !== 'undefined') {
     if (video === true && video !== null) {
@@ -23,7 +23,7 @@ export default function HoverCard(props) {
 
   return (
     <Link href={`/movie/${slug}`}>
-      <a className='card' key={props.id}>
+      <a className='card' key={id}>
         <div
           className='card-main'
           onMouseEnter={() => setHover(true)}

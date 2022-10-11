@@ -1,13 +1,15 @@
 import Card from './Card';
 
 export default function DisplayMovies(props) {
+  const { type, data } = props;
+
   function getType() {
-    switch (props.type) {
+    switch (type) {
       case 'movie':
       case 'show':
         return (
           <>
-            {props.data.map(
+            {data.map(
               (
                 {
                   slug,
@@ -20,7 +22,7 @@ export default function DisplayMovies(props) {
                 index
               ) => (
                 <Card
-                  type={props.type}
+                  type={type}
                   slug={slug}
                   primaryLabel={title_eng}
                   secondaryLabel={title_vn}
@@ -41,13 +43,13 @@ export default function DisplayMovies(props) {
       case 'actor':
         return (
           <>
-            {props.data.map(
+            {data.map(
               ({ slug, stagename, hannom, birthname, thumbnail }, index) => (
                 <Card
                   primaryLabel={stagename}
                   secondaryLabel={birthname}
                   sideLabel={hannom}
-                  type={props.type}
+                  type={type}
                   slug={slug}
                   key={index}
                   id={index}
@@ -62,7 +64,7 @@ export default function DisplayMovies(props) {
           </>
         );
       default:
-        return <p>No {props.type}s found.</p>;
+        return <p>No {type}s found.</p>;
     }
   }
 

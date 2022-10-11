@@ -28,9 +28,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-        <Nav />
-        <Component {...pageProps} />
-        <Footer />
+      <Nav />
+      <Component {...pageProps} />
+      <Footer />
     </>
   );
 }

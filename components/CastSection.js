@@ -1,11 +1,10 @@
 import Card from './Card';
 
 export default function CastSection(props) {
-  const actors = props.actorData;
-  const cast = props.castData;
+  const { actorData, castData } = props;
 
   function getThumbnail(actorName) {
-    const newActor = [...actors];
+    const newActor = [...actorData];
     var actor = [];
 
     const actorIndex = newActor.findIndex((i) => i.stagename == actorName);
@@ -22,8 +21,8 @@ export default function CastSection(props) {
     <section className='section'>
       <h2>Cast</h2>
       <div className='association'>
-        {cast.length !== 0 ? (
-          cast.map(({ role, actor }, index) => (
+        {castData.length !== 0 ? (
+          castData.map(({ role, actor }, index) => (
             <Card
               type='actor'
               primaryLabel={actor['data'][0].attributes.stagename}
