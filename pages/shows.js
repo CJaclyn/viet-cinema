@@ -13,24 +13,21 @@ export default function Shows({ showsData, page, genreData, filter }) {
   let genres = [];
   const router = useRouter();
 
-  function getShows() {
+  (function getShows() {
     for (let i in show) {
       shows.push(show[i].attributes);
     }
 
     return shows;
-  }
+  })();
 
-  function getGenres() {
+  (function getGenres() {
     for (let i in genre) {
       genres.push(genre[i].attributes.genre);
     }
 
     return genres.sort();
-  }
-
-  getShows();
-  getGenres();
+  })();
 
   return (
     <div className='page page-movies'>

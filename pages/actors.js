@@ -12,15 +12,13 @@ export default function Actors({ actorsData, page, filter }) {
   let actors = [];
   const router = useRouter();
 
-  function getActors() {
+  (function getActors() {
     for (let i in actor) {
       actors.push(actor[i].attributes);
     }
 
     return actors;
-  }
-
-  getActors();
+  })();
 
   return (
     <div className='page page-movies page-actors'>

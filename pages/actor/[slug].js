@@ -22,6 +22,17 @@ export default function Actor({
   let movieCasts = [];
   let showCasts = [];
 
+  (function getLinks() {
+    for (let i in link) {
+      links[i] = {
+        linkname: link[i].attributes.name,
+        url: link[i].attributes.url,
+      };
+    }
+
+    return links;
+  })();
+  
   function getAttributes(object, array, type) {
     for (let i in object) {
       array.push(object[i].attributes);
@@ -32,17 +43,6 @@ export default function Actor({
     }
 
     return array;
-  }
-
-  function getLinks() {
-    for (let i in link) {
-      links[i] = {
-        linkname: link[i].attributes.name,
-        url: link[i].attributes.url,
-      };
-    }
-
-    return links;
   }
 
   function getThumbnail(movieName, type) {
@@ -73,7 +73,6 @@ export default function Actor({
   getAttributes(showCast, showCasts, 'show');
   getAttributes(movie, movies);
   getAttributes(show, shows);
-  getLinks();
 
   return (
     <div className='page page-movie'>

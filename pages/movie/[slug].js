@@ -29,7 +29,7 @@ export default function Movie({ movieData, castData, actorData }) {
     thumbnail: thumbnail,
   };
 
-  function getGenres() {
+  (function getGenres() {
     for (let i in genre) {
       genres.push(genre[i].attributes.genre);
     }
@@ -38,7 +38,17 @@ export default function Movie({ movieData, castData, actorData }) {
     genres = genres.filter((item) => item !== 'All');
 
     return genres;
-  }
+  })();
+
+  (function getLinks() {
+    for (let i in link) {
+      links[i] = {
+        linkname: link[i].attributes.name,
+        url: link[i].attributes.url,
+      };
+    }
+    return links;
+  })();
 
   function getAttributes(object, array) {
     for (let i in object) {
@@ -47,17 +57,6 @@ export default function Movie({ movieData, castData, actorData }) {
     return array;
   }
 
-  function getLinks() {
-    for (let i in link) {
-      links[i] = {
-        linkname: link[i].attributes.name,
-        url: link[i].attributes.url,
-      };
-    }
-    return links;
-  }
-
-  //get data of actors that were casted in this movie
   function getActors() {
     const castMembers = [];
 
@@ -70,8 +69,6 @@ export default function Movie({ movieData, castData, actorData }) {
     );
   }
 
-  getGenres();
-  getLinks();
   getAttributes(cast, casts);
   getActors();
   getAttributes(actorsCast, actors);

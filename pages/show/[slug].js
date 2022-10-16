@@ -29,7 +29,7 @@ export default function Show({ showData, actorData, castData }) {
   let actorsCast = [];
   let actors = [];
 
-  function getGenres() {
+  (function getGenres() {
     for (let i in genre) {
       genres.push(genre[i].attributes.genre);
     }
@@ -38,7 +38,18 @@ export default function Show({ showData, actorData, castData }) {
     genres = genres.filter((item) => item !== 'All');
 
     return genres;
-  }
+  })();
+
+  (function getLinks() {
+    for (let i in link) {
+      links[i] = {
+        linkname: link[i].attributes.name,
+        url: link[i].attributes.url,
+      };
+    }
+
+    return links;
+  })();
 
   function getAttributes(object, array) {
     for (let i in object) {
@@ -59,22 +70,9 @@ export default function Show({ showData, actorData, castData }) {
     );
   }
 
-  function getLinks() {
-    for (let i in link) {
-      links[i] = {
-        linkname: link[i].attributes.name,
-        url: link[i].attributes.url,
-      };
-    }
-
-    return links;
-  }
-
-  getGenres();
   getAttributes(cast, casts);
   getActors();
   getAttributes(actorsCast, actors);
-  getLinks();
 
   return (
     <div className='page page-movie'>

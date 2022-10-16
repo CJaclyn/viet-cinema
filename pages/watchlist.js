@@ -3,7 +3,7 @@ import Card from '../components/Card';
 import PageHead from '../components/PageHead';
 
 export default function WatchlistPage() {
-  var [watchlist, setWatchlist] = useState([]);
+  let [watchlist, setWatchlist] = useState([]);
   const [edit, setEdit] = useState(false);
   let moviesWatchlist = 'moviesWatchlist';
 
