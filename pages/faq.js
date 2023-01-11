@@ -26,7 +26,7 @@ export default function faq() {
         />
         <FaqCard
           faqLabel='Why are there no links on some shows and movies?'
-          faqContent='Because there are no legal websites streaming that show or movie.'
+          faqContent='Because there are no legal/safe websites streaming that show or movie.'
         />
         <FaqCard
           faqLabel='Why is there Chinese on here? Isn&lsquo;t this a Vietnamese website?'

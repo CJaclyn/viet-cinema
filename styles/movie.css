@@ -90,6 +90,10 @@
   width: 100%;
 }
 
+.page-movie .info:last-of-type {
+  height: auto;
+}
+
 @media only screen and (min-width: 500px) {
   .page-movie .col:first-of-type {
     margin: initial;
