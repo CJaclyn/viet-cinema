@@ -1,4 +1,3 @@
-import { init } from 'aos';
 import { useState } from 'react';
 
 export default function FilterForm(props) {

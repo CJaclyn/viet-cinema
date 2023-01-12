@@ -9,34 +9,40 @@ export default function DisplayMovies(props) {
       case 'show':
         return (
           <>
-            {data.map(
-              (
-                {
-                  slug,
-                  title_vn,
-                  title_cn,
-                  title_eng,
-                  release_date,
-                  thumbnail,
-                },
-                index
-              ) => (
-                <Card
-                  type={type}
-                  slug={slug}
-                  primaryLabel={title_eng}
-                  secondaryLabel={title_vn}
-                  sideLabel={title_cn}
-                  year={release_date}
-                  key={index}
-                  id={index}
-                  img={
-                    thumbnail.data == null
-                      ? '/no-img.jpg'
-                      : `${thumbnail.data.attributes.url}`
-                  }
-                />
-              )
+            {data.length == 0 ? (
+              <p className='not-found'>None found with that genre.</p>
+            ) : (
+              <>
+                {data.map(
+                  (
+                    {
+                      slug,
+                      title_vn,
+                      title_cn,
+                      title_eng,
+                      release_date,
+                      thumbnail,
+                    },
+                    index
+                  ) => (
+                    <Card
+                      type={type}
+                      slug={slug}
+                      primaryLabel={title_eng}
+                      secondaryLabel={title_vn}
+                      sideLabel={title_cn}
+                      year={release_date}
+                      key={index}
+                      id={index}
+                      img={
+                        thumbnail.data == null
+                          ? '/no-img.jpg'
+                          : `${thumbnail.data.attributes.url}`
+                      }
+                    />
+                  )
+                )}
+              </>
             )}
           </>
         );
@@ -63,8 +69,6 @@ export default function DisplayMovies(props) {
             )}
           </>
         );
-      default:
-        return <p>No {type}s found.</p>;
     }
   }
 
