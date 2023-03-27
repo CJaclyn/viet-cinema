@@ -9,12 +9,6 @@
     min-height: 100%;
     display: none;
   }
-
-  .banana {
-    position: absolute;
-    right: 5rem;
-    z-index: -9999999;
-  }
   
   .wave-container {
     position: relative;
@@ -103,13 +97,9 @@
     .latest h1 {
       text-align: left;
     }
-
-    .cards-container {
-      width: 588px;
-    }
   }
 
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 900px) {
     .cards-container {
       width: 784px;
     }

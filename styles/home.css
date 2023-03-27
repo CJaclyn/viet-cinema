@@ -8,12 +8,6 @@
   display: none;
 }
 
-.page-home .banana {
-  position: absolute;
-  right: 5rem;
-  z-index: -9999999;
-}
-
 .page-home .wave-container {
   position: relative;
   width: 400px;
@@ -105,12 +99,9 @@
   .page-home .latest h1 {
     text-align: left;
   }
-  .page-home .cards-container {
-    width: 588px;
-  }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 900px) {
   .page-home .cards-container {
     width: 784px;
   }
